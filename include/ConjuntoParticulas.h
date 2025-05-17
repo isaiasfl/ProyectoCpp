@@ -77,6 +77,13 @@ public:
      * @return Referencia a la partícula
      */
     Particula& obtener(int pos);
+
+    /**
+     * Obtiene una copia de la partícula en la posición indicada
+     * @param pos Posición de la partícula
+     * @return Copia de la partícula
+     */
+    const Particula& obtener(int pos) const;
     
     /**
      * Reemplaza una partícula en la posición indicada

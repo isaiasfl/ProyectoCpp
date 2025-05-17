@@ -16,9 +16,6 @@ private:
     int tipo;
 
 public:
-    
-    void wrap();
-
     // Constructor con valor por defecto
     Particula(int tipoPart = 0);
     
@@ -40,6 +37,7 @@ public:
     // Métodos de movimiento y colisión
     void mover();
     void rebotar();
+    void wrap();
     bool colision(const Particula& otra) const;
     void choque(Particula& otra);
     
