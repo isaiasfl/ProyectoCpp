@@ -178,7 +178,7 @@ void ConjuntoParticulas::borrar(int pos) {
         
         // Verificamos si hay espacio extra que podemos liberar
         if ((capacidad - utiles) > TAM_BLOQUE) {
-            // Redimensionamos para ajustar exactamente a las partículas útiles
+            // Redimensionamos para que la capacidad coincida con el número de partículas
             redimensionar(utiles);
         }
     }
@@ -190,27 +190,11 @@ void ConjuntoParticulas::borrar(int pos) {
  * @return Referencia a la partícula
  */
 Particula& ConjuntoParticulas::obtener(int pos) {
-    // Verificar que la posición sea válida
-    if (pos >= 0 && pos < utiles) {
-        return set[pos];
-    } else {
-        // Si la posición no es válida, devolvemos la primera partícula
-        // Nota: esto es un comportamiento de seguridad, en un programa real
-        // sería mejor lanzar una excepción o manejar este caso de otra forma
-        return set[0];
-    }
+    return set[pos];
 }
 
 const Particula& ConjuntoParticulas::obtener(int pos) const {
-    // Verificar que la posición sea válida
-    if (pos >= 0 && pos < utiles) {
-        return set[pos];
-    } else {
-        // Si la posición no es válida, devolvemos la primera partícula
-        // Nota: esto es un comportamiento de seguridad, en un programa real
-        // sería mejor lanzar una excepción o manejar este caso de otra forma
-        return set[0];
-    }
+    return set[pos];
 }
 
 /**

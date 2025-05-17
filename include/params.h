@@ -25,9 +25,9 @@ const float IMPULSO_ESQUINA = 1.1f;    // Impulso adicional al rebotar en esquin
 const float REDUC_ACEL = 0.7f;         // Factor de reducción de aceleración tras rebote
 const float UMBRAL_ACEL = 0.05f;       // Umbral para considerar aceleración significativa
 const float FACTOR_ACEL_ALEATORIA = 0.1f; // Factor para nueva aceleración aleatoria
-const float FRICCION = 0.01f;          // Factor de fricción en el movimiento
 
-// Función para generar números aleatorios en un rango
+
+// Función para generar números aleatorios en un rango min y max
 inline float aleatorio(float min, float max) {
     float r = rand() / static_cast<float>(RAND_MAX);
     float rango = max - min;
